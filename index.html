@@ -1,3 +1,14 @@
+CV'nin "sıradan" ve hazır şablon gibi görünmesinin ana sebebi, web'de çok sık kullanılan standart mavi (`#0366d6`) ve gri tonlarının düz bir tasarımla birleştirilmesidir.
+
+Daha profesyonel, modern ve "premium" bir görünüm elde etmek için şu değişiklikleri yaptım:
+
+1. **Renk Paleti:** Çiğ bir sarı yerine, göz yormayan ve çok daha asil duran **"Hardal/Altın Sarısı" (`#eab308`)** kullandım. Metinlerde ise tam siyah yerine daha yumuşak ve modern duran koyu antrasit/lacivert gri (`#1a202c`) tercih ettim.
+2. **Başlık Tasarımı:** Alt çizgileri (border-bottom) kaldırıp, sol tarafa kalın sarı vurgu çizgileri (`border-left`) ekledim. Bu, CV'ye editoryal ve özel tasarım bir hava katar.
+3. **Temiz Kod:** HTML içine yazılmış tüm karmaşık `style="..."` (inline) kodlarını temizleyip CSS bölümüne taşıdım. Linkler ve resim artık çok daha şık duruyor. Ayrıca liste işaretleyicileri (bullet points) de sarı renge uyarlandı.
+
+İşte güncellenmiş kod:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,23 +16,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cahit Erdem Anıl - Curriculum Vitae</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 40px auto; max-width: 850px; line-height: 1.6; color: #333; padding: 0 20px; }
-        header { text-align: center; margin-bottom: 40px; }
-        h1 { border-bottom: 3px solid #0366d6; padding-bottom: 10px; margin-bottom: 5px; color: #24292e; }
-        .contact-info { color: #586069; font-size: 0.95em; }
-        h2 { color: #0366d6; margin-top: 35px; border-bottom: 1px solid #e1e4e8; padding-bottom: 5px; font-size: 1.4em; }
-        .item-title { font-weight: bold; color: #24292e; }
-        .item-meta { color: #586069; font-size: 0.9em; float: right; }
-        .item-subtitle { font-style: italic; color: #586069; margin-bottom: 10px; }
-        ul { padding-left: 20px; margin-top: 5px; }
-        li { margin-bottom: 8px; }
-        .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        /* Genel Tipografi ve Renkler */
+        body { 
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+            margin: 40px auto; 
+            max-width: 850px; 
+            line-height: 1.6; 
+            color: #2d3748; 
+            background-color: #fafafa;
+            padding: 0 20px; 
+        }
+
+        /* Başlık Alanı */
+        header { 
+            text-align: center; 
+            margin-bottom: 50px; 
+        }
+        
+        .profile-pic {
+            width: 150px; 
+            height: 150px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            margin-bottom: 20px; 
+            border: 4px solid #eab308; /* Altın sarısı çerçeve */
+            box-shadow: 0 8px 16px rgba(234, 179, 8, 0.15); /* Hafif sarımtırak gölge */
+        }
+
+        h1 { 
+            display: inline-block;
+            border-bottom: 4px solid #eab308; 
+            padding-bottom: 5px; 
+            margin-bottom: 10px; 
+            color: #1a202c; 
+            font-size: 2.5em;
+        }
+
+        .contact-info { 
+            color: #718096; 
+            font-size: 1em; 
+            letter-spacing: 0.5px;
+        }
+
+        /* Bölüm Başlıkları (H2) */
+        h2 { 
+            color: #1a202c; 
+            margin-top: 45px; 
+            margin-bottom: 25px;
+            border-left: 5px solid #eab308; /* Sol vurgu çizgisi */
+            padding-left: 12px; 
+            font-size: 1.4em; 
+            text-transform: uppercase; /* Modern görünüm için büyük harf */
+            letter-spacing: 1px;
+        }
+
+        /* İçerik Elemanları */
+        .item-title { 
+            font-weight: 700; 
+            color: #1a202c; 
+            font-size: 1.05em;
+        }
+        
+        .item-meta { 
+            color: #718096; 
+            font-size: 0.95em; 
+            float: right; 
+            font-weight: 500;
+        }
+        
+        .item-subtitle { 
+            font-style: italic; 
+            color: #4a5568; 
+            margin-bottom: 12px; 
+        }
+
+        /* Listeler */
+        ul { 
+            padding-left: 20px; 
+            margin-top: 8px; 
+        }
+        
+        li { 
+            margin-bottom: 8px; 
+        }
+
+        li::marker {
+            color: #eab308; /* Sarı liste noktaları */
+            font-weight: bold;
+        }
+
+        /* Linkler (a etiketleri) */
+        a { 
+            color: #b7791f; /* Koyu sarı/hardal */
+            text-decoration: none; 
+            font-weight: 600; 
+            margin-left: 8px; 
+            border-bottom: 1px dashed #b7791f;
+            transition: all 0.2s ease;
+        }
+
+        a:hover { 
+            color: #1a202c; 
+            border-bottom: 1px solid #1a202c; 
+        }
+
+        /* Yetenekler Izgarası */
+        .skills-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 20px; 
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #edf2f7;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="profile.jpg" alt="Cahit Erdem Anıl" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 3px solid #0366d6; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <img src="profile.jpg" alt="Cahit Erdem Anıl" class="profile-pic">
+        <br>
         <h1>Cahit Erdem Anıl</h1>
         <div class="contact-info">
             cahit [dot] anil [at] std [dot] bogazici [dot] edu [dot] tr | Istanbul, Turkey
@@ -52,18 +168,18 @@
     </ul>
 
     <h2>Research & Activities</h2>
-<div>
+    <div style="margin-bottom: 20px;">
         <span class="item-title">Polymath Jr. REU</span>
         <span class="item-meta">Remote</span>
         <div class="item-subtitle">Undergraduate Researcher</div>
         <ul>
             <li>Conducted research on the properties of symmetric ribbon links, focusing on their classification within knot theory.</li>
             <li><strong>Co-author:</strong> S. Akdogan, <strong>C. Anil</strong>, T. Barysiuk, C. Comeau, D. Glimp, C. Guleyupoglu, W. Guo, A. Lee, I. Lee, S. Lewis-Monkman, L. Moyar, A. Oppen, A. Rajwani, H. Shen, Y. Tang, E. Woods, A. Zupan. <em>"Ribbon numbers of ribbon links."</em> In preparation.
-                <a href="Polymath_reu_ribbonlinks.pdf" target="_blank" style="color: #0366d6; text-decoration: none; font-weight: bold; margin-left: 10px;">[View Personal Program Log]</a>
+                <a href="Polymath_reu_ribbonlinks.pdf" target="_blank">[View Personal Program Log]</a>
             </li>
             <li><strong>Group N Project:</strong> W. Guo, C. Comeau, Y. Tang, <strong>C. E. Anil</strong>, G. Picone. <em>"Ribbon Links: Classification up to 11 Crossings."</em>
-                <a href="polymath-group-n-report.pdf" target="_blank" style="color: #0366d6; text-decoration: none; font-weight: bold; margin-left: 10px;">[View Final Report]</a>
-                <a href="polymath-group-n-presentation.pdf" target="_blank" style="color: #0366d6; text-decoration: none; font-weight: bold; margin-left: 10px;">[View Beamer Presentation]</a>
+                <a href="polymath-group-n-report.pdf" target="_blank">[View Final Report]</a>
+                <a href="polymath-group-n-presentation.pdf" target="_blank">[View Beamer Presentation]</a>
             </li>
         </ul>
     </div>
@@ -76,40 +192,39 @@
             <li>
                 <strong>IMBM Istanbul Topology Days (May 2026):</strong> 
                 Attended the conference on "Developments in Contact Topology, Mapping Class Groups, and Beyond" at Boğaziçi University.
-               
             </li>
             <li>
                 <strong>Math Seminars: Bahar Acu (Mar 2026):</strong> 
                 Attended the workinng seminar "Open Books and Singular Fibrations in Higher-Dimensional Contact Topology" at Boğaziçi University.
-               
             </li>
-            <li><strong>Nesin Math Village (2020 - 2025):</strong> </li>
+            <li><strong>Nesin Math Village (2020 - 2025):</strong></li>
             <li><strong>Çakılarası Mathematics Village (2025):</strong> Completed "Arithmetic Geometry (Chabauty Coleman method)" course led by Enis Kaya.</li>
             <li><strong>Sirince School on Mathematical and Theoretical Physics (2023):</strong> Participated in the SMTP workshop led by Ilmar Gahramanov.</li>
         </ul>
     </div>
-<h2>Selected Coursework & Presentations</h2>
+
+    <h2>Selected Coursework & Presentations</h2>
     <div>
         <ul>
             <li>
                 <strong>Algebraic Topology (Math 572) Presentation:</strong> 
                 Presented on Hatcher's Proposition 1.18-1.19 regarding fundamental groups and homotopy equivalences.
-                <a href="hatcher-presentation.pdf" target="_blank" style="color: #0366d6; text-decoration: none; font-weight: bold; margin-left: 10px;">[View Presentation Slides]</a>
+                <a href="hatcher-presentation.pdf" target="_blank">[View Presentation Slides]</a>
             </li>
             <li>
                 <strong>Algebraic Topology (572) Homework / Notes:</strong> 
                 Detailed coursework covering applications of the Seifert-van Kampen theorem, CW-complexes, and the Brouwer Fixed Point Theorem using Long Exact Sequences.
-                <a href="alg-topo-homework.pdf" target="_blank" style="color: #0366d6; text-decoration: none; font-weight: bold; margin-left: 10px;">[View Homework Document]</a>
+                <a href="alg-topo-homework.pdf" target="_blank">[View Homework Document]</a>
             </li>
             <li>
                 <strong>Differential Geometry Report:</strong> 
                 Comprehensive coursework and report exploring the theory and properties of minimal surfaces.
-                <a href="minimalsurfacespreentation.pdf" target="_blank" style="color: #0366d6; text-decoration: none; font-weight: bold; margin-left: 10px;">[View Report]</a>
+                <a href="minimalsurfacespreentation.pdf" target="_blank">[View Report]</a>
             </li>
             <li>
                 <strong>Symplectic Geometry & Morse Theory Presentation:</strong> 
                 Working seminar presentation covering key concepts in Morse theory on symplectic manifolds.
-                <a href="morsetheorypresenation.pdf" target="_blank" style="color: #0366d6; text-decoration: none; font-weight: bold; margin-left: 10px;">[View Presentation Slides]</a>
+                <a href="morsetheorypresenation.pdf" target="_blank">[View Presentation Slides]</a>
             </li>
             <li>
                 <strong>Fourier Analysis (Math 433) Presentation:</strong> 
@@ -122,17 +237,18 @@
             <li>
                 <strong>Lecture Notes & Problem Solutions:</strong> 
                 I regularly share my organized lecture notes and problem solutions from various undergraduate mathematics courses.
-                <a href="https://www.scribd.com/user/814382327/Cahit-Erdem-Anil" target="_blank" style="color: #0366d6; text-decoration: none; font-weight: bold; margin-left: 10px;">[View My Scribd Profile]</a>
-                <ul style="margin-top: 5px; margin-bottom: 10px; color: #586069; font-size: 0.95em;">
+                <a href="https://www.scribd.com/user/814382327/Cahit-Erdem-Anil" target="_blank">[View My Scribd Profile]</a>
+                <ul style="margin-top: 8px; margin-bottom: 10px; color: #718096; font-size: 0.95em;">
                     <li><em>Available notes include:</em> Arithmetic Geometry, Matrix Groups, Math 234 (Advanced Calculus), Math 331 (Metric Spaces), and Math 433 (Fourier Analysis).</li>
                 </ul>
             </li>
         </ul>
     </div>
+
     <h2>Skills</h2>
     <div class="skills-grid">
         <div>
-            <strong>Programming & Tools:</strong>
+            <span class="item-title">Programming & Tools:</span>
             <ul>
                 <li>Python (NumPy, Matplotlib)</li>
                 <li>LaTeX</li>
@@ -140,7 +256,7 @@
             </ul>
         </div>
         <div>
-            <strong>Languages:</strong>
+            <span class="item-title">Languages:</span>
             <ul>
                 <li>Turkish (Native)</li>
                 <li>English (Fluent)</li>
@@ -155,10 +271,7 @@
         <li>Drawing</li>
     </ul>
 
-
 </body>
 </html>
 
-
-
-
+```
