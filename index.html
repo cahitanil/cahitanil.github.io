@@ -1,251 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cahit Erdem Anıl - Curriculum Vitae</title>
-    <style>
-        body { 
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
-            margin: 40px auto; 
-            max-width: 850px; 
-            line-height: 1.6; 
-            color: #2d3748; 
-            background-color: #fafafa;
-            padding: 0 20px; 
-        }
-
-        header { 
-            text-align: center; 
-            margin-bottom: 50px; 
-        }
-        
-        .profile-pic {
-            width: 150px; 
-            height: 150px; 
-            border-radius: 50%; 
-            object-fit: cover; 
-            margin-bottom: 20px; 
-            border: 4px solid #eab308; 
-            box-shadow: 0 8px 16px rgba(234, 179, 8, 0.15); 
-        }
-
-        h1 { 
-            display: inline-block;
-            border-bottom: 4px solid #eab308; 
-            padding-bottom: 5px; 
-            margin-bottom: 10px; 
-            color: #1a202c; 
-            font-size: 2.5em;
-        }
-
-        .contact-info { 
-            color: #718096; 
-            font-size: 1em; 
-            letter-spacing: 0.5px;
-        }
-
-        h2 { 
-            color: #1a202c; 
-            margin-top: 45px; 
-            margin-bottom: 25px;
-            border-left: 5px solid #eab308; 
-            padding-left: 12px; 
-            font-size: 1.4em; 
-            text-transform: uppercase; 
-            letter-spacing: 1px;
-        }
-
-        .item-title { 
-            font-weight: 700; 
-            color: #1a202c; 
-            font-size: 1.05em;
-        }
-        
-        .item-meta { 
-            color: #718096; 
-            font-size: 0.95em; 
-            float: right; 
-            font-weight: 500;
-        }
-        
-        .item-subtitle { 
-            font-style: italic; 
-            color: #4a5568; 
-            margin-bottom: 12px; 
-        }
-
-        ul { 
-            padding-left: 20px; 
-            margin-top: 8px; 
-        }
-        
-        li { 
-            margin-bottom: 8px; 
-        }
-
-        li::marker {
-            color: #eab308; 
-            font-weight: bold;
-        }
-
-        a { 
-            color: #b7791f; 
-            text-decoration: none; 
-            font-weight: 600; 
-            margin-left: 8px; 
-            border-bottom: 1px dashed #b7791f;
-            transition: all 0.2s ease;
-        }
-
-        a:hover { 
-            color: #1a202c; 
-            border-bottom: 1px solid #1a202c; 
-        }
-
-        .skills-grid { 
-            display: grid; 
-            grid-template-columns: 1fr 1fr; 
-            gap: 20px; 
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid #edf2f7;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cahit Erdem Anıl - Curriculum Vitae</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 40px auto; max-width: 850px; line-height: 1.6; color: #333; padding: 0 20px; }
+        header { text-align: center; margin-bottom: 40px; }
+        h1 { border-bottom: 3px solid #0366d6; padding-bottom: 10px; margin-bottom: 5px; color: #24292e; }
+        .contact-info { color: #586069; font-size: 0.95em; }
+        h2 { color: #0366d6; margin-top: 35px; border-bottom: 1px solid #e1e4e8; padding-bottom: 5px; font-size: 1.4em; }
+        .item-title { font-weight: bold; color: #24292e; }
+        .item-meta { color: #586069; font-size: 0.9em; float: right; }
+        .item-subtitle { font-style: italic; color: #586069; margin-bottom: 10px; }
+        ul { padding-left: 20px; margin-top: 5px; }
+        li { margin-bottom: 8px; }
+        .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    </style>
 </head>
 <body>
 
-    <header>
-        <img src="profile.jpg" alt="Cahit Erdem Anıl" class="profile-pic">
-        <br>
-        <h1>Cahit Erdem Anıl</h1>
-        <div class="contact-info">
-            cahit.anil@std.bogazici.edu.tr | Istanbul, Turkey
-        </div>
-    </header>
+    <header>
+        <img src="profile.jpg" alt="Cahit Erdem Anıl" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 3px solid #0366d6; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <h1>Cahit Erdem Anıl</h1>
+        <div class="contact-info">
+            cahit [dot] anil [at] std [dot] bogazici [dot] edu [dot] tr | Istanbul, Turkey
+        </div>
+    </header>
 
-    <h2>Education</h2>
-    <div>
-        <span class="item-title">Boğaziçi University</span>
-        <span class="item-meta">Istanbul, Turkey</span>
-        <div class="item-subtitle">B.Sc. Mathematics</div>
-        <ul>
-            <li>Expected Graduation: 2027 | GPA: 3.30</li>
-            <li>Coursework Focus: Algebraic Topology, Symplectic Geometry, p-adic Analysis </li>
-        </ul>
-        
-        <div class="item-subtitle">B.Sc. Physics (Transferred to Mathematics) (2021 - 2024)</div>
-        <ul>
-            <li>GPA: 3.20</li>
-        </ul>
-    </div>
+    <h2>Education</h2>
+    <div>
+        <span class="item-title">Boğaziçi University</span>
+        <span class="item-meta">Istanbul, Turkey</span>
+        <div class="item-subtitle">B.Sc. Mathematics</div>
+        <ul>
+            <li>Expected Graduation: 2027 | GPA: 3.30</li>
+            <li>Coursework Focus: Algebraic Topology, Symplectic Geometry, p-adic Analysis </li>
+        </ul>
+        
+        <div class="item-subtitle">B.Sc. Physics (Transferred to Mathematics) (2021 - 2024)</div>
+        <ul>
+            <li>GPA: 3.20</li>
+        </ul>
+    </div>
 
-    <h2>Honors & Awards</h2>
-    <ul>
-        <li><strong>TÜBİTAK Undergraduate Scholarship (BİDEB 2205):</strong> National scholarship program for B.Sc. students.</li>
-        <li><strong>TÜBİTAK Undergraduate Mentorship (BİDEB 2248):</strong> National mentoring support program.</li>
-        <li><strong>National Exams:</strong> Placed 1667th (SAY 2985th) among 2 million in YKS (2020) and Top %0.18 nationwide in TEOG (2016).</li>
-    </ul>
+    <h2>Honors & Awards</h2>
+    <ul>
+        <li><strong>TÜBİTAK Undergraduate Scholarship (BİDEB 2205):</strong> National Scholarship Program for B.Sc. Students.</li>
+        <li><strong>TÜBİTAK Undergraduate Mentorship (BİDEB 2248):</strong> National Mentoring Support Program.</li>
+        <li><strong>National Exams:</strong> Placed 1667th (SAY 2985th) among 2 million in YKS (2020) and Top %0.18 nationwide in TEOG (2016).</li>
+    </ul>
 
-    <h2>Research & Activities</h2>
-    <div style="margin-bottom: 20px;">
-        <span class="item-title">Polymath Jr. REU</span>
-        <span class="item-meta">Remote</span>
-        <div class="item-subtitle">Undergraduate Researcher</div>
-        <ul>
-            <li>Studied symmetric ribbon links and their classification in knot theory.</li>
-            <li><strong>Co-author:</strong> S. Akdogan, <strong>C. Anil</strong>, T. Barysiuk, C. Comeau, D. Glimp, C. Guleyupoglu, W. Guo, A. Lee, I. Lee, S. Lewis-Monkman, L. Moyar, A. Oppen, A. Rajwani, H. Shen, Y. Tang, E. Woods, A. Zupan. <em>"Ribbon numbers of ribbon links."</em> In preparation.
-                <a href="Polymath_reu_ribbonlinks.pdf" target="_blank">[View Personal Log]</a>
-            </li>
-            <li><strong>Group N Project:</strong> W. Guo, C. Comeau, Y. Tang, <strong>C. E. Anil</strong>, G. Picone. <em>"Ribbon Links: Classification up to 11 Crossings."</em>
-                <a href="polymath-group-n-report.pdf" target="_blank">[View Report]</a>
-                <a href="polymath-group-n-presentation.pdf" target="_blank">[View Slides]</a>
-            </li>
-        </ul>
-    </div>
+    <h2>Research & Activities</h2>
+<div>
+        <span class="item-title">Polymath Jr. REU</span>
+        <span class="item-meta">Remote</span>
+        <div class="item-subtitle">Undergraduate Researcher</div>
+        <ul>
+            <li>Conducted research on the properties of symmetric ribbon links, focusing on their classification within knot theory.</li>
+            <li><strong>Co-author:</strong> S. Akdogan, <strong>C. Anil</strong>, T. Barysiuk, C. Comeau, D. Glimp, C. Guleyupoglu, W. Guo, A. Lee, I. Lee, S. Lewis-Monkman, L. Moyar, A. Oppen, A. Rajwani, H. Shen, Y. Tang, E. Woods, A. Zupan. <em>"Ribbon numbers of ribbon links."</em> In preparation.
+                <a href="Polymath_reu_ribbonlinks.pdf" target="_blank" style="color: #0366d6; text-decoration: none; font-weight: bold; margin-left: 10px;">[View Personal Program Log]</a>
+            </li>
+            <li><strong>Group N Project:</strong> W. Guo, C. Comeau, Y. Tang, <strong>C. E. Anil</strong>, G. Picone. <em>"Ribbon Links: Classification up to 11 Crossings."</em>
+                <a href="polymath-group-n-report.pdf" target="_blank" style="color: #0366d6; text-decoration: none; font-weight: bold; margin-left: 10px;">[View Final Report]</a>
+                <a href="polymath-group-n-presentation.pdf" target="_blank" style="color: #0366d6; text-decoration: none; font-weight: bold; margin-left: 10px;">[View Beamer Presentation]</a>
+            </li>
+        </ul>
+    </div>
 
-    <div>
-        <span class="item-title">Academic Conferences & Workshops</span>
-        <ul>
-            <li><strong>32nd Gökova Geometry & Topology Conference</strong> (May 2027)</li>
-            <li><strong>31st Gökova Geometry & Topology Conference</strong> (May 2026)</li>
-            <li><strong>IMBM Istanbul Topology Days</strong> (May 2026) - Focus on contact topology and mapping class groups.</li>
-            <li><strong>Math Seminars: Bahar Acu</strong> (Mar 2026) - Working seminar on higher-dimensional contact topology.</li>
-            <li><strong>Nesin Math Village</strong> (2020 - 2025)</li>
-            <li><strong>Çakılarası Mathematics Village</strong> (2025) - Arithmetic Geometry (Chabauty-Coleman method) led by Enis Kaya.</li>
-            <li><strong>Sirince School on Mathematical and Theoretical Physics</strong> (2023) - Workshop led by Ilmar Gahramanov.</li>
-        </ul>
-    </div>
+    <div>
+        <span class="item-title">Academic Conferences & Workshops</span>
+        <ul>
+            <li><strong>32nd Gökova Geometry & Topology Conference (May 2027)</strong></li>
+            <li><strong>31st Gökova Geometry & Topology Conference (May 2026)</strong></li>
+            <li>
+                <strong>IMBM Istanbul Topology Days (May 2026):</strong> 
+                Attended the conference on "Developments in Contact Topology, Mapping Class Groups, and Beyond" at Boğaziçi University.
+               
+            </li>
+            <li>
+                <strong>Math Seminars: Bahar Acu (Mar 2026):</strong> 
+                Attended the workinng seminar "Open Books and Singular Fibrations in Higher-Dimensional Contact Topology" at Boğaziçi University.
+               
+            </li>
+            <li><strong>Nesin Math Village (2020 - 2025):</strong> </li>
+            <li><strong>Çakılarası Mathematics Village (2025):</strong> Completed "Arithmetic Geometry (Chabauty Coleman method)" course led by Enis Kaya.</li>
+            <li><strong>Sirince School on Mathematical and Theoretical Physics (2023):</strong> Participated in the SMTP workshop led by Ilmar Gahramanov.</li>
+        </ul>
+    </div>
+<h2>Selected Coursework & Presentations</h2>
+    <div>
+        <ul>
+            <li>
+                <strong>Algebraic Topology (Math 572) Presentation:</strong> 
+                Presented on Hatcher's Proposition 1.18-1.19 regarding fundamental groups and homotopy equivalences.
+                <a href="hatcher-presentation.pdf" target="_blank" style="color: #0366d6; text-decoration: none; font-weight: bold; margin-left: 10px;">[View Presentation Slides]</a>
+            </li>
+            <li>
+                <strong>Algebraic Topology (572) Homework / Notes:</strong> 
+                Detailed coursework covering applications of the Seifert-van Kampen theorem, CW-complexes, and the Brouwer Fixed Point Theorem using Long Exact Sequences.
+                <a href="alg-topo-homework.pdf" target="_blank" style="color: #0366d6; text-decoration: none; font-weight: bold; margin-left: 10px;">[View Homework Document]</a>
+            </li>
+            <li>
+                <strong>Differential Geometry Report:</strong> 
+                Comprehensive coursework and report exploring the theory and properties of minimal surfaces.
+                <a href="minimalsurfacespreentation.pdf" target="_blank" style="color: #0366d6; text-decoration: none; font-weight: bold; margin-left: 10px;">[View Report]</a>
+            </li>
+            <li>
+                <strong>Symplectic Geometry & Morse Theory Presentation:</strong> 
+                Working seminar presentation covering key concepts in Morse theory on symplectic manifolds.
+                <a href="morsetheorypresenation.pdf" target="_blank" style="color: #0366d6; text-decoration: none; font-weight: bold; margin-left: 10px;">[View Presentation Slides]</a>
+            </li>
+            <li>
+                <strong>Fourier Analysis (Math 433) Presentation:</strong> 
+                Presented the detailed proof of the mean-square convergence of Fourier series, utilizing orthogonal projections and the best approximation lemma.
+            </li>
+            <li>
+                <strong>Ribbon Knots Research Presentations:</strong> 
+                Presented research findings on ribbon knots to my TüBiTAK advisor. Additionally, adapted and delivered this material to a first-year undergraduate mentee as part of the TÜBİTAK mentorship program.
+            </li>
+            <li>
+                <strong>Lecture Notes & Problem Solutions:</strong> 
+                I regularly share my organized lecture notes and problem solutions from various undergraduate mathematics courses.
+                <a href="https://www.scribd.com/user/814382327/Cahit-Erdem-Anil" target="_blank" style="color: #0366d6; text-decoration: none; font-weight: bold; margin-left: 10px;">[View My Scribd Profile]</a>
+                <ul style="margin-top: 5px; margin-bottom: 10px; color: #586069; font-size: 0.95em;">
+                    <li><em>Available notes include:</em> Arithmetic Geometry, Matrix Groups, Math 234 (Advanced Calculus), Math 331 (Metric Spaces), and Math 433 (Fourier Analysis).</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <h2>Skills</h2>
+    <div class="skills-grid">
+        <div>
+            <strong>Programming & Tools:</strong>
+            <ul>
+                <li>Python (NumPy, Matplotlib)</li>
+                <li>LaTeX</li>
+                <li>MATLAB (Basic)</li>
+            </ul>
+        </div>
+        <div>
+            <strong>Languages:</strong>
+            <ul>
+                <li>Turkish (Native)</li>
+                <li>English (Fluent)</li>
+                <li>French (Basic)</li>
+            </ul>
+        </div>
+    </div>
 
-    <h2>Selected Coursework & Presentations</h2>
-    <div>
-        <ul>
-            <li>
-                <strong>Algebraic Topology (Math 572) Presentation:</strong> 
-                Talk on fundamental groups and homotopy equivalences (Hatcher Prop. 1.18-1.19).
-                <a href="hatcher-presentation.pdf" target="_blank">[View Slides]</a>
-            </li>
-            <li>
-                <strong>Algebraic Topology (572) Homework / Notes:</strong> 
-                Course notes focusing on the Seifert-van Kampen theorem, CW-complexes, and Brouwer Fixed Point Theorem.
-                <a href="alg-topo-homework.pdf" target="_blank">[View Document]</a>
-            </li>
-            <li>
-                <strong>Differential Geometry Report:</strong> 
-                Term project and report on minimal surfaces.
-                <a href="minimalsurfacespreentation.pdf" target="_blank">[View Report]</a>
-            </li>
-            <li>
-                <strong>Symplectic Geometry & Morse Theory:</strong> 
-                Seminar talk on Morse theory on symplectic manifolds.
-                <a href="morsetheorypresenation.pdf" target="_blank">[View Slides]</a>
-            </li>
-            <li>
-                <strong>Fourier Analysis (Math 433):</strong> 
-                Presented the proof of mean-square convergence of Fourier series using orthogonal projections.
-            </li>
-            <li>
-                <strong>Ribbon Knots Presentation:</strong> 
-                Presented REU findings to my TÜBİTAK advisor. Adapted the material for a 1st-year mentee in the TÜBİTAK mentorship program.
-            </li>
-            <li>
-                <strong>Lecture Notes & Solutions:</strong> 
-                Shared typeset lecture notes and problem solutions for undergraduate math courses.
-                <a href="https://www.scribd.com/user/814382327/Cahit-Erdem-Anil" target="_blank">[Scribd Profile]</a>
-                <ul style="margin-top: 8px; margin-bottom: 10px; color: #718096; font-size: 0.95em;">
-                    <li><em>Includes:</em> Arithmetic Geometry, Matrix Groups, Math 234 (Advanced Calculus), Math 331 (Metric Spaces), Math 433 (Fourier Analysis).</li>
-                </ul>
-            </li>
-        </ul>
-    </div>
+    <h2>Extracurricular</h2>
+    <ul>
+        <li>Active long-distance runner (10km, 21km finisher, approx. 5:30/km pace).</li>
+        <li>Drawing</li>
+    </ul>
 
-    <h2>Skills</h2>
-    <div class="skills-grid">
-        <div>
-            <span class="item-title">Programming & Tools:</span>
-            <ul>
-                <li>Python (NumPy, Matplotlib)</li>
-                <li>LaTeX</li>
-                <li>MATLAB (Basic)</li>
-            </ul>
-        </div>
-        <div>
-            <span class="item-title">Languages:</span>
-            <ul>
-                <li>Turkish (Native)</li>
-                <li>English (Fluent)</li>
-                <li>French (Basic)</li>
-            </ul>
-        </div>
-    </div>
-
-    <h2>Extracurricular</h2>
-    <ul>
-        <li>Long-distance running (10K and Half-Marathon finisher, ~5:30/km pace)</li>
-        <li>Sketching</li>
-    </ul>
 
 </body>
 </html>
+
+
+
+sitenin renklerini değiştir böyle free website'a benziyor. sarı rengini tercih edebilirsin 
