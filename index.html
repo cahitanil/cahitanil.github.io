@@ -1,251 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cahit Erdem Anıl - Curriculum Vitae</title>
-    <style>
-        body { 
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
-            margin: 40px auto; 
-            max-width: 850px; 
-            line-height: 1.6; 
-            color: #2d3748; 
-            background-color: #fafafa;
-            padding: 0 20px; 
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cahit Erdem Anıl — Mathematics undergraduate at Boğaziçi University.">
+  <title>Cahit Erdem Anıl — Curriculum Vitae</title>
+  <style>
+    :root {
+      --ink: #202a3a;
+      --muted: #667085;
+      --paper: #f3f2ee;
+      --sheet: #fffefa;
+      --gold: #c89519;
+      --gold-soft: #f5ebcf;
+      --line: #dedbd2;
+      --link: #8b6510;
+    }
 
-        header { 
-            text-align: center; 
-            margin-bottom: 50px; 
-        }
-        
-        .profile-pic {
-            width: 150px; 
-            height: 150px; 
-            border-radius: 50%; 
-            object-fit: cover; 
-            margin-bottom: 20px; 
-            border: 4px solid #eab308; 
-            box-shadow: 0 8px 16px rgba(234, 179, 8, 0.15); 
-        }
+    * { box-sizing: border-box; }
 
-        h1 { 
-            display: inline-block;
-            border-bottom: 4px solid #eab308; 
-            padding-bottom: 5px; 
-            margin-bottom: 10px; 
-            color: #1a202c; 
-            font-size: 2.5em;
-        }
+    html { background: var(--paper); }
 
-        .contact-info { 
-            color: #718096; 
-            font-size: 1em; 
-            letter-spacing: 0.5px;
-        }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.65;
+    }
 
-        h2 { 
-            color: #1a202c; 
-            margin-top: 45px; 
-            margin-bottom: 25px;
-            border-left: 5px solid #eab308; 
-            padding-left: 12px; 
-            font-size: 1.4em; 
-            text-transform: uppercase; 
-            letter-spacing: 1px;
-        }
+    a { color: inherit; }
 
-        .item-title { 
-            font-weight: 700; 
-            color: #1a202c; 
-            font-size: 1.05em;
-        }
-        
-        .item-meta { 
-            color: #718096; 
-            font-size: 0.95em; 
-            float: right; 
-            font-weight: 500;
-        }
-        
-        .item-subtitle { 
-            font-style: italic; 
-            color: #4a5568; 
-            margin-bottom: 12px; 
-        }
+    .resume {
+      width: min(920px, calc(100% - 32px));
+      margin: 38px auto;
+      padding: 64px 72px 38px;
+      background: var(--sheet);
+      border: 1px solid #e1ded5;
+      box-shadow: 0 14px 45px rgba(32, 42, 58, 0.07);
+    }
 
-        ul { 
-            padding-left: 20px; 
-            margin-top: 8px; 
-        }
-        
-        li { 
-            margin-bottom: 8px; 
-        }
+    .resume-header {
+      text-align: center;
+      padding-bottom: 36px;
+      border-bottom: 1px solid var(--line);
+    }
 
-        li::marker {
-            color: #eab308; 
-            font-weight: bold;
-        }
+    .profile-pic {
+      width: 132px;
+      height: 132px;
+      display: block;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--sheet);
+      outline: 3px solid var(--gold);
+      box-shadow: 0 7px 18px rgba(32, 42, 58, 0.12);
+    }
 
-        a { 
-            color: #b7791f; 
-            text-decoration: none; 
-            font-weight: 600; 
-            margin-left: 8px; 
-            border-bottom: 1px dashed #b7791f;
-            transition: all 0.2s ease;
-        }
+    h1 {
+      width: fit-content;
+      margin: 0 auto 5px;
+      padding: 0 8px 5px;
+      color: #182234;
+      border-bottom: 3px solid var(--gold);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 38px;
+      line-height: 1.2;
+      font-weight: 600;
+      letter-spacing: -0.025em;
+    }
 
-        a:hover { 
-            color: #1a202c; 
-            border-bottom: 1px solid #1a202c; 
-        }
+    .role {
+      margin: 11px 0 8px;
+      color: #48556a;
+      font-size: 14px;
+    }
 
-        .skills-grid { 
-            display: grid; 
-            grid-template-columns: 1fr 1fr; 
-            gap: 20px; 
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid #edf2f7;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-        }
-    </style>
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px 10px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .contact-info a {
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+
+    .contact-info a:hover {
+      color: var(--link);
+      border-bottom-color: var(--gold);
+    }
+
+    section { margin-top: 38px; }
+
+    h2 {
+      margin: 0 0 20px;
+      padding: 4px 0 4px 13px;
+      color: #182234;
+      border-left: 4px solid var(--gold);
+      font-size: 16px;
+      line-height: 1.3;
+      font-weight: 750;
+      letter-spacing: 0.105em;
+      text-transform: uppercase;
+    }
+
+    .entry { margin-bottom: 25px; }
+    .entry:last-child { margin-bottom: 0; }
+    .compact-entry { margin-top: 4px; }
+
+    .entry-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: baseline;
+    }
+
+    h3 {
+      margin: 0;
+      color: #202a3a;
+      font-size: 15px;
+      line-height: 1.45;
+      font-weight: 730;
+    }
+
+    .regular { font-weight: 500; color: #4d596b; }
+
+    .date {
+      flex: none;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .subtitle {
+      margin: 2px 0 7px;
+      color: #566276;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 14px;
+      font-style: italic;
+    }
+
+    ul { margin: 7px 0 0; padding-left: 19px; }
+    li { margin: 5px 0; padding-left: 3px; }
+    li::marker { color: var(--gold); }
+    .separator { padding: 0 5px; color: #aaa292; }
+    .note { color: var(--muted); font-style: italic; }
+    .project-list li { margin-bottom: 9px; }
+
+    .doc-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-left: 7px;
+      padding: 1px 7px;
+      color: var(--link);
+      background: var(--gold-soft);
+      border: 1px solid #e7d49d;
+      border-radius: 4px;
+      font-size: 11px;
+      line-height: 1.6;
+      font-weight: 750;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+    }
+
+    .doc-link:hover {
+      color: #fff;
+      background: var(--link);
+      border-color: var(--link);
+    }
+
+    .doc-link span { font-size: 10px; }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border: 1px solid var(--line);
+      background: #fbfaf6;
+    }
+
+    .skills-grid > div { padding: 18px 20px; }
+    .skills-grid > div + div { border-left: 1px solid var(--line); }
+    .skills-grid h3 { margin-bottom: 5px; }
+    .skills-grid p { margin: 0; color: #515e72; font-size: 13px; }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 44px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      color: #8a8f98;
+      font-size: 11px;
+    }
+
+    footer a { color: var(--link); text-decoration: none; }
+
+    @media (max-width: 700px) {
+      body { font-size: 14px; }
+      .resume { width: 100%; margin: 0; padding: 42px 24px 28px; border: 0; box-shadow: none; }
+      .profile-pic { width: 112px; height: 112px; }
+      h1 { font-size: 31px; }
+      section { margin-top: 32px; }
+      .entry-head { display: block; }
+      .date { display: block; margin-top: 2px; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .skills-grid > div + div { border-left: 0; border-top: 1px solid var(--line); }
+    }
+
+    @media print {
+      @page { margin: 16mm; }
+      html, body { background: #fff; }
+      body { font-size: 10pt; line-height: 1.45; }
+      .resume { width: auto; margin: 0; padding: 0; border: 0; box-shadow: none; }
+      .resume-header { padding-bottom: 20px; }
+      .profile-pic { width: 90px; height: 90px; }
+      h1 { font-size: 26pt; }
+      section { margin-top: 22px; break-inside: avoid; }
+      h2 { font-size: 11pt; }
+      .doc-link { background: transparent; border: 0; padding: 0; text-decoration: underline; }
+      footer { display: none; }
+    }
+  </style>
 </head>
 <body>
-
-    <header>
-        <img src="profile.jpg" alt="Cahit Erdem Anıl" class="profile-pic">
-        <br>
-        <h1>Cahit Erdem Anıl</h1>
-        <div class="contact-info">
-            cahit.anil@std.bogazici.edu.tr | Istanbul, Turkey
-        </div>
+  <main class="resume">
+    <header class="resume-header">
+      <img src="profile.jpg" alt="Cahit Erdem Anıl" class="profile-pic">
+      <h1>Cahit Erdem Anıl</h1>
+      <p class="role">Mathematics Undergraduate at Boğaziçi University</p>
+      <div class="contact-info">
+        <a href="mailto:cahit.anil@std.bogazici.edu.tr">cahit.anil@std.bogazici.edu.tr</a>
+        <span aria-hidden="true">·</span><span>Istanbul, Türkiye</span><span aria-hidden="true">·</span>
+        <a href="https://github.com/cahitanil" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
     </header>
 
-    <h2>Education</h2>
-    <div>
-        <span class="item-title">Boğaziçi University</span>
-        <span class="item-meta">Istanbul, Turkey</span>
-        <div class="item-subtitle">B.Sc. Mathematics</div>
+    <section>
+      <h2>Education</h2>
+      <div class="entry">
+        <div class="entry-head"><h3>Boğaziçi University</h3><span class="date">Istanbul, Türkiye</span></div>
+        <p class="subtitle">B.Sc. Mathematics</p>
         <ul>
-            <li>Expected Graduation: 2027 | GPA: 3.30</li>
-            <li>Coursework Focus: Algebraic Topology, Symplectic Geometry, Differential Geometry </li>
+          <li>Expected graduation: 2027 <span class="separator">|</span> GPA: 3.30</li>
+          <li>Coursework focus: Algebraic Topology, Symplectic Geometry, Differential Geometry</li>
         </ul>
-        
-        <div class="item-subtitle">B.Sc. Physics (Transferred to Mathematics) (2021 - 2024)</div>
-        <ul>
-            <li>GPA: 3.20</li>
-        </ul>
-    </div>
+      </div>
+      <div class="entry compact-entry">
+        <div class="entry-head"><h3>B.Sc. Physics <span class="regular">(transferred to Mathematics)</span></h3><span class="date">2021–2024</span></div>
+        <ul><li>GPA: 3.20</li></ul>
+      </div>
+    </section>
 
-    <h2>Honors & Awards</h2>
-    <ul>
+    <section>
+      <h2>Honors &amp; Awards</h2>
+      <ul>
         <li><strong>TÜBİTAK Undergraduate Scholarship (BİDEB 2205):</strong> National scholarship program for B.Sc. students.</li>
         <li><strong>TÜBİTAK Undergraduate Mentorship (BİDEB 2248):</strong> National mentoring support program.</li>
-        <li><strong>National Exams:</strong> Placed 1667th (SAY 2985th) among 2 million in YKS (2020) and Top %0.18 nationwide in TEOG (2016).</li>
-    </ul>
+        <li><strong>National Exams:</strong> Ranked 1,667th (SAY: 2,985th) among approximately two million candidates in YKS 2020; top 0.18% nationwide in TEOG 2016.</li>
+      </ul>
+    </section>
 
-    <h2>Research & Activities</h2>
-    <div style="margin-bottom: 20px;">
-        <span class="item-title">Polymath Jr. REU</span>
-        <span class="item-meta">Remote</span>
-        <div class="item-subtitle">Undergraduate Researcher</div>
+    <section>
+      <h2>Research &amp; Activities</h2>
+      <div class="entry">
+        <div class="entry-head"><h3>Polymath Jr. REU</h3><span class="date">Remote · 2025</span></div>
+        <p class="subtitle">Undergraduate Researcher</p>
         <ul>
-            <li>Studied symmetric ribbon links and challanged the question "Does every Ribbon Link admit a symmetric union presentation?".</li>
-            <li><strong>Co-author:</strong> S. Akdogan, <strong>C. Anil</strong>, T. Barysiuk, C. Comeau, D. Glimp, C. Guleyupoglu, W. Guo, A. Lee, I. Lee, S. Lewis-Monkman, L. Moyar, A. Oppen, A. Rajwani, H. Shen, Y. Tang, E. Woods, A. Zupan. <em>"Ribbon numbers of ribbon links."</em> In preparation.
-                <a href="Polymath_reu_ribbonlinks.pdf" target="_blank">[View Personal Log]</a>
-            </li>
-            <li><strong>Group N Project:</strong> W. Guo, C. Comeau, Y. Tang, <strong>C. E. Anil</strong>, G. Picone. <em>"Ribbon Links: Classification up to 11 Crossings."</em>
-                <a href="polymath-group-n-report.pdf" target="_blank">[View Report]</a>
-                <a href="polymath-group-n-presentation.pdf" target="_blank">[View Slides]</a>
-            </li>
+          <li>Studied symmetric ribbon links and investigated the question: “Does every ribbon link admit a symmetric union presentation?”</li>
+          <li><strong>Collaborative paper:</strong> S. Akdogan, <strong>C. Anil</strong>, T. Barysiuk, C. Comeau, D. Glimp, C. Guleyupoglu, W. Guo, A. Lee, I. Lee, S. Lewis-Monkman, L. Moyar, A. Oppen, A. Rajwani, H. Shen, Y. Tang, E. Woods, and A. Zupan. <em>Ribbon Numbers of Ribbon Links.</em> In preparation. <a class="doc-link" href="Polymath_reu_ribbonlinks.pdf" target="_blank" rel="noopener noreferrer">Personal log <span aria-hidden="true">↗</span></a></li>
+          <li><strong>Group N project:</strong> W. Guo, C. Comeau, Y. Tang, <strong>C. E. Anil</strong>, and G. Picone. <em>Ribbon Links: Classification up to 11 Crossings.</em> <a class="doc-link" href="polymath-group-n-report.pdf" target="_blank" rel="noopener noreferrer">Report <span aria-hidden="true">↗</span></a><a class="doc-link" href="polymath-group-n-presentation.pdf" target="_blank" rel="noopener noreferrer">Slides <span aria-hidden="true">↗</span></a></li>
         </ul>
-    </div>
+      </div>
 
-    <div>
-        <span class="item-title">Academic Conferences & Workshops</span>
+      <div class="entry">
+        <h3>Academic Conferences &amp; Workshops</h3>
         <ul>
-            <li><strong>32nd Gökova Geometry & Topology Conference</strong> (May 2027)</li>
-            <li><strong>31st Gökova Geometry & Topology Conference</strong> (May 2026)</li>
-            <li><strong>IMBM Istanbul Topology Days at Boğaziçi University</strong> (May 2026) - Focus on contact topology and mapping class groups.</li>
-            <li><strong>Math Seminars: Bahar Acu</strong> (Mar 2026) - Working seminar on Open books and Singular fibrations on higher-dimensional contact topology.</li>
-            <li><strong>Nesin Math Village</strong> (2020 - 2025)</li>
-            <li><strong>Çakılarası Mathematics Village</strong> (2025) - Arithmetic Geometry (Chabauty-Coleman method) led by Enis Kaya.</li>
-            <li><strong>Sirince School on Mathematical and Theoretical Physics</strong> (2023) - Workshop led by Ilmar Gahramanov.</li>
+          <li><strong>32nd Gökova Geometry &amp; Topology Conference</strong> — May 2027 <span class="note">(upcoming)</span></li>
+          <li><strong>31st Gökova Geometry &amp; Topology Conference</strong> — May 2026</li>
+          <li><strong>IMBM Istanbul Topology Days at Boğaziçi University</strong> — May 2026; contact topology and mapping class groups.</li>
+          <li><strong>Working Seminar with Bahar Acu</strong> — March 2026; open books and singular fibrations in higher-dimensional contact topology.</li>
+          <li><strong>Nesin Mathematics Village</strong> — 2020–2025</li>
+          <li><strong>Çakılarası Mathematics Village</strong> — 2025; Arithmetic Geometry (Chabauty–Coleman method), led by Enis Kaya.</li>
+          <li><strong>Şirince School on Mathematical and Theoretical Physics</strong> — 2023; workshop led by Ilmar Gahramanov.</li>
         </ul>
-    </div>
+      </div>
+    </section>
 
-    <h2>Selected Coursework & Presentations</h2>
-    <div>
-        <ul>
-            <li>
-                <strong>Algebraic Topology (Math 572) Presentation:</strong> 
-                Talk on fundamental groups and homotopy equivalences (Hatcher Prop. 1.18-1.19).
-                <a href="hatcher-presentation.pdf" target="_blank">[View Slides]</a>
-            </li>
-            <li>
-                <strong>Algebraic Topology (572) Homework / Notes:</strong> 
-                Course notes focusing on the Seifert-van Kampen theorem, CW-complexes, and Brouwer Fixed Point Theorem using LES.
-                <a href="alg-topo-homework.pdf" target="_blank">[View Document]</a>
-            </li>
-            <li>
-                <strong>Differential Geometry Report:</strong> 
-                Term project and report on minimal surfaces.
-                <a href="minimalsurfacespreentation.pdf" target="_blank">[View Report]</a>
-            </li>
-            <li>
-                <strong>Symplectic Geometry & Morse Theory:</strong> 
-                Seminar talk on Morse theory on symplectic manifolds.
-                <a href="morsetheorypresenation.pdf" target="_blank">[View Slides]</a>
-            </li>
-            <li>
-                <strong>Fourier Analysis (Math 433):</strong> 
-                Presented the proof of mean-square convergence of Fourier series using orthogonal projections and best approximation lemma.
-            </li>
-            <li>
-                <strong>Ribbon Knots Presentation:</strong> 
-                Presented REU findings to my TÜBİTAK advisor. Adapted the material for a 1st-year mentee in the TÜBİTAK mentorship program.
-            </li>
-            <li>
-                <strong>Lecture Notes & Solutions:</strong> 
-                Shared typeset lecture notes and problem solutions for undergraduate math courses.
-                <a href="https://www.scribd.com/user/814382327/Cahit-Erdem-Anil" target="_blank">[Scribd Profile]</a>
-                <ul style="margin-top: 8px; margin-bottom: 10px; color: #718096; font-size: 0.95em;">
-                    <li><em>Includes:</em> Arithmetic Geometry, Matrix Groups, Math 234 (Advanced Calculus), Math 331 (Metric Spaces), Math 433 (Fourier Analysis).</li>
-                </ul>
-            </li>
-        </ul>
-    </div>
+    <section>
+      <h2>Selected Coursework &amp; Presentations</h2>
+      <ul class="project-list">
+        <li><strong>Algebraic Topology (MATH 572) Presentation:</strong> Fundamental groups and homotopy equivalences (Hatcher, Propositions 1.18–1.19). <a class="doc-link" href="hatcher-presentation.pdf" target="_blank" rel="noopener noreferrer">Slides <span aria-hidden="true">↗</span></a></li>
+        <li><strong>Algebraic Topology (MATH 572) Notes:</strong> The Seifert–van Kampen theorem, CW complexes, and the Brouwer fixed-point theorem using the long exact sequence. <a class="doc-link" href="alg-topo-homework.pdf" target="_blank" rel="noopener noreferrer">Document <span aria-hidden="true">↗</span></a></li>
+        <li><strong>Differential Geometry Report:</strong> Term project on minimal surfaces. <a class="doc-link" href="minimalsurfacespreentation.pdf" target="_blank" rel="noopener noreferrer">Report <span aria-hidden="true">↗</span></a></li>
+        <li><strong>Symplectic Geometry &amp; Morse Theory:</strong> Seminar talk on Morse theory on symplectic manifolds. <a class="doc-link" href="morsetheorypresenation.pdf" target="_blank" rel="noopener noreferrer">Slides <span aria-hidden="true">↗</span></a></li>
+        <li><strong>Fourier Analysis (MATH 433):</strong> Presented the proof of mean-square convergence of Fourier series using orthogonal projections and the best-approximation lemma.</li>
+        <li><strong>Ribbon Knots Presentation:</strong> Presented REU findings to my TÜBİTAK advisor and adapted the material for a first-year mentee in the TÜBİTAK mentorship program.</li>
+        <li><strong>Lecture Notes &amp; Solutions:</strong> Typeset notes and problem solutions for Arithmetic Geometry, Matrix Groups, Advanced Calculus, Metric Spaces, and Fourier Analysis. <a class="doc-link" href="https://www.scribd.com/user/814382327/Cahit-Erdem-Anil" target="_blank" rel="noopener noreferrer">Scribd <span aria-hidden="true">↗</span></a></li>
+      </ul>
+    </section>
 
-    <h2>Skills</h2>
-    <div class="skills-grid">
-        <div>
-            <span class="item-title">Programming & Tools:</span>
-            <ul>
-                <li>Python (NumPy, Matplotlib)</li>
-                <li>LaTeX</li>
-                <li>MATLAB (Basic)</li>
-            </ul>
-        </div>
-        <div>
-            <span class="item-title">Languages:</span>
-            <ul>
-                <li>Turkish (Native)</li>
-                <li>English (Fluent)</li>
-                <li>French (Basic)</li>
-            </ul>
-        </div>
-    </div>
+    <section>
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div><h3>Programming &amp; Tools</h3><p>Python (NumPy, Matplotlib) · LaTeX · MATLAB (basic)</p></div>
+        <div><h3>Languages</h3><p>Turkish (native) · English (fluent) · French (basic)</p></div>
+      </div>
+    </section>
 
-    <h2>Extracurricular</h2>
-    <ul>
-        <li>Long-distance running (10K and Half-Marathon finisher, ~5:30/km pace)</li>
+    <section>
+      <h2>Extracurricular</h2>
+      <ul>
+        <li>Long-distance running — 10K and half-marathon finisher (approximately 5:30/km pace)</li>
         <li>Sketching</li>
-    </ul>
+      </ul>
+    </section>
 
+    <footer><span>Last updated August 2026</span><a href="mailto:cahit.anil@std.bogazici.edu.tr">Contact me</a></footer>
+  </main>
 </body>
 </html>
