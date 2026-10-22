@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cahit Erdem Anıl — Mathematics undergraduate at Boğaziçi University.">
+  <title>Cahit Erdem Anıl — Curriculum Vitae</title>
+  <style>
+    :root {
+      --ink: #202a3a;
+      --muted: #667085;
+      --paper: #f3f2ee;
+      --sheet: #fffefa;
+      --gold: #c89519;
+      --gold-soft: #f5ebcf;
+      --line: #dedbd2;
+      --link: #8b6510;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { background: var(--paper); }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    a { color: inherit; }
+
+    .resume {
+      width: min(920px, calc(100% - 32px));
+      margin: 38px auto;
+      padding: 64px 72px 38px;
+      background: var(--sheet);
+      border: 1px solid #e1ded5;
+      box-shadow: 0 14px 45px rgba(32, 42, 58, 0.07);
+    }
+
+    .resume-header {
+      text-align: center;
+      padding-bottom: 36px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .profile-pic {
+      width: 132px;
+      height: 132px;
+      display: block;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--sheet);
+      outline: 3px solid var(--gold);
+      box-shadow: 0 7px 18px rgba(32, 42, 58, 0.12);
+    }
+
+    h1 {
+      width: fit-content;
+      margin: 0 auto 5px;
+      padding: 0 8px 5px;
+      color: #182234;
+      border-bottom: 3px solid var(--gold);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 38px;
+      line-height: 1.2;
+      font-weight: 600;
+      letter-spacing: -0.025em;
+    }
+
+    .role {
+      margin: 11px 0 8px;
+      color: #48556a;
+      font-size: 14px;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px 10px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .contact-info a {
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+
+    .contact-info a:hover {
+      color: var(--link);
+      border-bottom-color: var(--gold);
+    }
+
+    section { margin-top: 38px; }
+
+    h2 {
+      margin: 0 0 20px;
+      padding: 4px 0 4px 13px;
+      color: #182234;
+      border-left: 4px solid var(--gold);
+      font-size: 16px;
+      line-height: 1.3;
+      font-weight: 750;
+      letter-spacing: 0.105em;
+      text-transform: uppercase;
+    }
+
+    .entry { margin-bottom: 25px; }
+    .entry:last-child { margin-bottom: 0; }
+    .compact-entry { margin-top: 4px; }
+
+    .entry-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: baseline;
+    }
+
+    h3 {
+      margin: 0;
+      color: #202a3a;
+      font-size: 15px;
+      line-height: 1.45;
+      font-weight: 730;
+    }
+
+    .regular { font-weight: 500; color: #4d596b; }
+
+    .date {
+      flex: none;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .subtitle {
+      margin: 2px 0 7px;
+      color: #566276;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 14px;
+      font-style: italic;
+    }
+
+    ul { margin: 7px 0 0; padding-left: 19px; }
+    li { margin: 5px 0; padding-left: 3px; }
+    li::marker { color: var(--gold); }
+    .separator { padding: 0 5px; color: #aaa292; }
+    .note { color: var(--muted); font-style: italic; }
+    .project-list li { margin-bottom: 9px; }
+
+    .doc-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-left: 7px;
+      padding: 1px 7px;
+      color: var(--link);
+      background: var(--gold-soft);
+      border: 1px solid #e7d49d;
+      border-radius: 4px;
+      font-size: 11px;
+      line-height: 1.6;
+      font-weight: 750;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+    }
+
+    .doc-link:hover {
+      color: #fff;
+      background: var(--link);
+      border-color: var(--link);
+    }
+
+    .doc-link span { font-size: 10px; }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border: 1px solid var(--line);
+      background: #fbfaf6;
+    }
+
+    .skills-grid > div { padding: 18px 20px; }
+    .skills-grid > div + div { border-left: 1px solid var(--line); }
+    .skills-grid h3 { margin-bottom: 5px; }
+    .skills-grid p { margin: 0; color: #515e72; font-size: 13px; }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 44px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      color: #8a8f98;
+      font-size: 11px;
+    }
+
+    footer a { color: var(--link); text-decoration: none; }
+
+    @media (max-width: 700px) {
+      body { font-size: 14px; }
+      .resume { width: 100%; margin: 0; padding: 42px 24px 28px; border: 0; box-shadow: none; }
+      .profile-pic { width: 112px; height: 112px; }
+      h1 { font-size: 31px; }
+      section { margin-top: 32px; }
+      .entry-head { display: block; }
+      .date { display: block; margin-top: 2px; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .skills-grid > div + div { border-left: 0; border-top: 1px solid var(--line); }
+    }
+
+    @media print {
+      @page { margin: 16mm; }
+      html, body { background: #fff; }
+      body { font-size: 10pt; line-height: 1.45; }
+      .resume { width: auto; margin: 0; padding: 0; border: 0; box-shadow: none; }
+      .resume-header { padding-bottom: 20px; }
+      .profile-pic { width: 90px; height: 90px; }
+      h1 { font-size: 26pt; }
+      section { margin-top: 22px; break-inside: avoid; }
+      h2 { font-size: 11pt; }
+      .doc-link { background: transparent; border: 0; padding: 0; text-decoration: underline; }
+      footer { display: none; }
+    }
+
+    /* Running and artwork */
+    .running-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+      gap: 30px;
+      align-items: center;
+    }
+    .running-photo, .artwork { margin: 0; min-width: 0; }
+    .photo-link {
+      display: block;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: #f4f1e9;
+      cursor: zoom-in;
+    }
+    .photo-link img { display: block; width: 100%; height: auto; }
+    .photo-link:hover { border-color: var(--gold); }
+    .photo-link:focus-visible, .gallery-close:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 4px;
+    }
+    .running-photo figcaption, .artwork figcaption {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .running-copy h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 25px;
+      font-weight: 500;
+      line-height: 1.25;
+    }
+    .running-copy p { margin: 13px 0 0; color: #515e72; }
+    .running-stats {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      margin: 24px 0 0;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+    }
+    .running-stats > div { display: flex; flex-direction: column; }
+    .running-stats dt { order: 2; color: var(--muted); font-size: 12px; }
+    .running-stats dd {
+      margin: 0 0 4px;
+      color: var(--link);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 28px;
+      line-height: 1.2;
+    }
+    .art-heading { margin-top: 34px; }
+    .art-intro { margin: 5px 0 18px; color: #515e72; font-size: 14px; }
+    .art-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px 18px;
+    }
+    .artwork .photo-link { aspect-ratio: 3 / 4; }
+    .artwork:nth-child(n+3) .photo-link { aspect-ratio: 4 / 3; }
+    .artwork .photo-link img { width: 100%; height: 100%; object-fit: contain; }
+    .artwork figcaption { display: flex; gap: 10px; align-items: baseline; }
+    .art-number { color: var(--link); font-size: 10px; letter-spacing: 0.06em; }
+    .gallery-dialog {
+      max-width: calc(100vw - 32px);
+      max-height: calc(100dvh - 32px);
+      margin: auto;
+      padding: 42px 12px 12px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      background: var(--sheet);
+      color: var(--ink);
+    }
+    .gallery-dialog::backdrop { background: rgba(16, 23, 35, 0.86); }
+    .gallery-dialog img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: min(1100px, calc(100vw - 60px));
+      max-height: calc(100dvh - 130px);
+      object-fit: contain;
+      margin: 0 auto;
+    }
+    .gallery-dialog p { margin: 9px 0 0; color: var(--muted); font-size: 12px; }
+    .gallery-close {
+      position: absolute;
+      top: 5px;
+      right: 7px;
+      border: 0;
+      background: transparent;
+      padding: 5px 9px;
+      font: inherit;
+      font-size: 13px;
+      color: var(--ink);
+      cursor: pointer;
+    }
+    html.gallery-open { overflow: hidden; }
+    @media (max-width: 600px) {
+      .running-layout { grid-template-columns: 1fr; gap: 20px; }
+      .running-copy { order: -1; }
+      .running-photo { width: min(100%, 360px); margin: 0 auto; }
+      .running-copy h3 { font-size: 23px; }
+      .art-grid { gap: 18px 12px; }
+    }
+    @media (max-width: 420px) {
+      .art-grid { grid-template-columns: 1fr; }
+      .artwork .photo-link, .artwork:nth-child(n+3) .photo-link { aspect-ratio: auto; }
+      .artwork .photo-link img { height: auto; }
+    }
+    @media print {
+      #running-art { break-inside: auto; }
+      .running-layout, .artwork { break-inside: avoid; }
+      .running-layout { grid-template-columns: 160px 1fr; gap: 20px; }
+      .running-copy { order: 0; }
+      .running-copy h3 { font-size: 17pt; }
+      .running-stats dd { font-size: 20pt; }
+      .art-grid { grid-template-columns: 1fr 1fr; }
+      .artwork .photo-link, .artwork:nth-child(n+3) .photo-link { aspect-ratio: 4 / 3; }
+      .artwork .photo-link img { height: 100%; }
+      .gallery-dialog { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="resume">
+    <header class="resume-header">
+      <img src="profile.jpg" alt="Cahit Erdem Anıl" class="profile-pic">
+      <h1>Cahit Erdem Anıl</h1>
+      <p class="role">Mathematics Undergraduate at Boğaziçi University</p>
+      <div class="contact-info">
+        <a href="mailto:cahit.anil@std.bogazici.edu.tr">cahit.anil@std.bogazici.edu.tr</a>
+        <span aria-hidden="true">·</span><span>Istanbul, Türkiye</span><span aria-hidden="true">·</span>
+        <a href="https://github.com/cahitanil" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </header>
+
+    <section>
+      <h2>Education</h2>
+      <div class="entry">
+        <div class="entry-head"><h3>Boğaziçi University</h3><span class="date">Istanbul, Türkiye</span></div>
+        <p class="subtitle">B.Sc. Mathematics</p>
+        <ul>
+          <li>Expected graduation: 2027 <span class="separator">|</span> GPA: 3.30</li>
+          <li>Coursework focus: Algebraic Topology, Symplectic Geometry, Differential Geometry</li>
+        </ul>
+      </div>
+      <div class="entry compact-entry">
+        <div class="entry-head"><h3>B.Sc. Physics <span class="regular">(transferred to Mathematics)</span></h3><span class="date">2021–2024</span></div>
+        <ul><li>GPA: 3.20</li></ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Honors &amp; Awards</h2>
+      <ul>
+        <li><strong>TÜBİTAK Undergraduate Scholarship (BİDEB 2205):</strong> National scholarship program for B.Sc. students.</li>
+        <li><strong>TÜBİTAK Undergraduate Mentorship (BİDEB 2248):</strong> National mentoring support program.</li>
+        <li><strong>National Exams:</strong> Ranked 1,667th (SAY: 2,985th) among approximately two million candidates in YKS 2020; top 0.18% nationwide in TEOG 2016.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Research &amp; Activities</h2>
+      <div class="entry">
+        <div class="entry-head"><h3>Polymath Jr. REU</h3><span class="date">Remote · 2025</span></div>
+        <p class="subtitle">Undergraduate Researcher</p>
+        <ul>
+          <li>Studied symmetric ribbon links and investigated the question: “Does every ribbon link admit a symmetric union presentation?”</li>
+          <li><strong>Collaborative paper:</strong> S. Akdogan, <strong>C. Anil</strong>, T. Barysiuk, C. Comeau, D. Glimp, C. Guleyupoglu, W. Guo, A. Lee, I. Lee, S. Lewis-Monkman, L. Moyar, A. Oppen, A. Rajwani, H. Shen, Y. Tang, E. Woods, and A. Zupan. <em>Ribbon Numbers of Ribbon Links.</em> In preparation. <a class="doc-link" href="Polymath_reu_ribbonlinks.pdf" target="_blank" rel="noopener noreferrer">Personal log <span aria-hidden="true">↗</span></a></li>
+          <li><strong>Group N project:</strong> W. Guo, C. Comeau, Y. Tang, <strong>C. E. Anil</strong>, and G. Picone. <em>Ribbon Links: Classification up to 11 Crossings.</em> <a class="doc-link" href="polymath-group-n-report.pdf" target="_blank" rel="noopener noreferrer">Report <span aria-hidden="true">↗</span></a><a class="doc-link" href="polymath-group-n-presentation.pdf" target="_blank" rel="noopener noreferrer">Slides <span aria-hidden="true">↗</span></a></li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <h3>Academic Conferences &amp; Workshops</h3>
+        <ul>
+          <li><strong>32nd Gökova Geometry &amp; Topology Conference</strong> — 2026</li>
+          <li><strong>31st Gökova Geometry &amp; Topology Conference</strong> — 2025</li>
+          <li><strong>IMBM Istanbul Topology Days at Boğaziçi University</strong> — May 2026; contact topology and mapping class groups.</li>
+          <li><strong>Working Seminar with Bahar Acu</strong> — March 2026; open books and singular fibrations in higher-dimensional contact topology.</li>
+          <li><strong>Nesin Mathematics Village</strong> — 2020–2025</li>
+          <li><strong>Çakılarası Mathematics Village</strong> — 2025; Arithmetic Geometry (Chabauty–Coleman method), led by Enis Kaya.</li>
+          <li><strong>Şirince School on Mathematical and Theoretical Physics</strong> — 2023; workshop led by Ilmar Gahramanov.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Selected Coursework &amp; Presentations</h2>
+      <ul class="project-list">
+        <li><strong>Algebraic Topology (MATH 572) Presentation:</strong> Fundamental groups and homotopy equivalences (Hatcher, Propositions 1.18–1.19). <a class="doc-link" href="hatcher-presentation.pdf" target="_blank" rel="noopener noreferrer">Slides <span aria-hidden="true">↗</span></a></li>
+        <li><strong>Algebraic Topology (MATH 572) Notes:</strong> The Seifert–van Kampen theorem, CW complexes, and the Brouwer fixed-point theorem using the long exact sequence. <a class="doc-link" href="alg-topo-homework.pdf" target="_blank" rel="noopener noreferrer">Document <span aria-hidden="true">↗</span></a></li>
+        <li><strong>Differential Geometry Report:</strong> Term project on minimal surfaces. <a class="doc-link" href="minimalsurfacespreentation.pdf" target="_blank" rel="noopener noreferrer">Report <span aria-hidden="true">↗</span></a></li>
+        <li><strong>Symplectic Geometry &amp; Morse Theory:</strong> Seminar talk on Morse theory on symplectic manifolds. <a class="doc-link" href="morsetheorypresenation.pdf" target="_blank" rel="noopener noreferrer">Slides <span aria-hidden="true">↗</span></a></li>
+        <li><strong>Fourier Analysis (MATH 433):</strong> Presented the proof of mean-square convergence of Fourier series using orthogonal projections and the best-approximation lemma.</li>
+        <li><strong>Ribbon Knots Presentation:</strong> Presented REU findings to my TÜBİTAK advisor and adapted the material for a first-year mentee in the TÜBİTAK mentorship program.</li>
+        <li><strong>Lecture Notes &amp; Solutions:</strong> Typeset notes and problem solutions for Arithmetic Geometry, Matrix Groups, Advanced Calculus, Metric Spaces, and Fourier Analysis. <a class="doc-link" href="https://www.scribd.com/user/814382327/Cahit-Erdem-Anil" target="_blank" rel="noopener noreferrer">Scribd <span aria-hidden="true">↗</span></a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div><h3>Programming &amp; Tools</h3><p>Python (NumPy, Matplotlib) · LaTeX · MATLAB (basic)</p></div>
+        <div><h3>Languages</h3><p>Turkish (native) · English (fluent) · French (basic)</p></div>
+      </div>
+    </section>
+
+    <section id="running-art" aria-labelledby="running-art-heading">
+      <h2 id="running-art-heading">Running &amp; Art</h2>
+      <div class="running-layout">
+        <figure class="running-photo">
+          <a class="photo-link" href="images/running-track.jpg" data-gallery aria-label="View running photo at full size">
+            <img src="images/running-track.jpg" width="1169" height="1600" alt="Running on an outdoor track beside a grass field." loading="lazy" decoding="async">
+          </a>
+          <figcaption>On the track</figcaption>
+        </figure>
+        <div class="running-copy">
+          <h3>Long-distance running</h3>
+          <p>I am an active runner, covering <strong>more than 25 km each week</strong>. I have completed 10K and half-marathon distances, including a <strong>sub-2-hour half marathon (21.1 km)</strong>.</p>
+          <dl class="running-stats">
+            <div><dt>Weekly running distance</dt><dd>25+ km</dd></div>
+            <div><dt>Half marathon · 21.1 km</dt><dd>Sub-2h</dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <h3 class="art-heading">Selected artwork</h3>
+      <p class="art-intro">A selection of my sketches and colour studies. Click any image to view it in full.</p>
+      <div class="art-grid">
+        <figure class="artwork">
+          <a class="photo-link" href="images/portrait-green-yellow.jpg" data-gallery aria-label="View green and yellow portrait at full size">
+            <img src="images/portrait-green-yellow.jpg" width="1536" height="2048" alt="Expressive portrait in green, yellow, grey and black." loading="lazy" decoding="async">
+          </a>
+          <figcaption><span class="art-number" aria-hidden="true">01</span> Portrait in green &amp; yellow</figcaption>
+        </figure>
+        <figure class="artwork">
+          <a class="photo-link" href="images/portrait-gold.jpg" data-gallery aria-label="View gold and green portrait at full size">
+            <img src="images/portrait-gold.jpg" width="750" height="1066" alt="Portrait of a bearded face in gold, orange and green tones." loading="lazy" decoding="async">
+          </a>
+          <figcaption><span class="art-number" aria-hidden="true">02</span> Portrait in gold &amp; green</figcaption>
+        </figure>
+        <figure class="artwork">
+          <a class="photo-link" href="images/portrait-study-landscape.jpg" data-gallery aria-label="View portrait and hand study at full size">
+            <img src="images/portrait-study-landscape.jpg" width="2048" height="1517" alt="Black portrait study with a hand resting across the forehead, on pale pink paper." loading="lazy" decoding="async">
+          </a>
+          <figcaption><span class="art-number" aria-hidden="true">03</span> Portrait &amp; hand study</figcaption>
+        </figure>
+        <figure class="artwork">
+          <a class="photo-link" href="images/portrait-study-monochrome.jpg" data-gallery aria-label="View monochrome portrait at full size">
+            <img src="images/portrait-study-monochrome.jpg" width="1071" height="1071" alt="Monochrome portrait sketch with an arm raised over the head." loading="lazy" decoding="async">
+          </a>
+          <figcaption><span class="art-number" aria-hidden="true">04</span> Monochrome portrait</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <footer><span>Last updated October 2026</span><a href="mailto:cahit.anil@std.bogazici.edu.tr">Contact me</a></footer>
+  </main>
+  <dialog class="gallery-dialog" aria-label="Full-size photo viewer" aria-describedby="gallery-caption">
+    <button class="gallery-close" type="button" aria-label="Close photo viewer">Close ×</button>
+    <img alt="">
+    <p id="gallery-caption"></p>
+  </dialog>
+  <script>
+    (() => {
+      const dialog = document.querySelector('.gallery-dialog');
+      if (!dialog || typeof dialog.showModal !== 'function') return;
+      const viewerImage = dialog.querySelector('img');
+      const viewerCaption = dialog.querySelector('p');
+      let previousFocus = null;
+
+      document.querySelectorAll('[data-gallery]').forEach(link => {
+        link.addEventListener('click', event => {
+          if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+          event.preventDefault();
+          const thumbnail = link.querySelector('img');
+          previousFocus = link;
+          viewerImage.src = link.href;
+          viewerImage.alt = thumbnail.alt;
+          viewerCaption.textContent = link.closest('figure').querySelector('figcaption').textContent.trim();
+          document.documentElement.classList.add('gallery-open');
+          dialog.showModal();
+        });
+      });
+      dialog.querySelector('button').addEventListener('click', () => dialog.close());
+      dialog.addEventListener('click', event => {
+        const bounds = dialog.getBoundingClientRect();
+        if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();
+      });
+      dialog.addEventListener('close', () => {
+        document.documentElement.classList.remove('gallery-open');
+        if (previousFocus) previousFocus.focus({preventScroll: true});
+      });
+    })();
+  </script>
+</body>
+</html>
